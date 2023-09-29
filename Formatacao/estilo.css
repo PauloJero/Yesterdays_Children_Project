@@ -1,0 +1,358 @@
+
+/* Color variables */
+:root {
+  --outline-color: darkred;
+  --background-color: #f4fbf6;
+  --primary-color: #005B97;
+  --secondary-color: #0079D3;
+  --text-color: #1B1A1A;
+  --highlight-color: #CCE0F4;
+  --highlight-color2: #A2FF59;
+  --success-color: #d4edda;
+  --error-color: #f8d7da;
+  --box-border-color: #005B97;
+  --navbar-background-color: #CCE0F4;
+  --submenu-background-color: #CCE0F4;
+  --success-text-color: #155724;
+  --error-text-color: #721c24;
+  --wrapper-background-color: #fff;
+  --wrapper-box-shadow-color: rgba(0, 0, 0, 0.1);
+  --wrapper-text-shadow-color: rgba(0, 0, 0, 0.5);
+  --nav-item-color: #000000;
+}
+
+/* * {
+  outline: var(--outline-color) dashed 1px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+
+body {
+  background-color: var(--background-color);
+  background-image: url("../Midia/imgs/background.png");
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+form {
+  font-size: 15px;
+}
+
+span {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 50px;
+}
+
+h2,
+th {
+  text-transform: uppercase;
+}
+
+nav {
+  max-height: 60px;
+}
+
+button,
+td > a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  height: 40px;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+button > a {
+  text-decoration: none;
+  color: white;
+}
+
+form>span{
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+
+button {
+  margin-top: 13px;
+  height: 45px;
+  width: 145px;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.groupSection {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--highlight-color);
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  }
+
+#welcome {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+#slogan {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 70px;
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  border-radius: 10px;
+  background-color: var(--highlight-color);
+  padding: 5px;
+  border: 1px solid var(--box-border-color);
+  z-index: 999;
+}
+
+.section-button{
+  height: 70px;
+  width: 145px;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.atualizar-button{
+  margin-top: 13px;
+  height: 50px;
+  width: 120px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.container.p-5 {
+  margin-top: 150px;
+  overflow-y: auto;
+  margin-left: 20%;
+}
+
+.text-muted {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+.text-center>button{
+  margin-top: 13px;
+  height: 45px;
+  width: 180px;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+
+.col-lg-6{
+  border-radius: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  /* box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+  0 32px 64px -48px rgba(0, 0, 0, 0.5); */
+}
+
+.login{
+  border-radius: 25px;
+  background-color: var(--highlight-color2);
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  margin-left: 250px;
+}
+
+.login:hover{
+  background-color: var(--highlight-color);
+}
+
+.nav-link:hover{
+  color: var(--secondary-color);
+}
+
+.nav-link{
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.25s;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.container-fluid.p-3.text-center{
+  margin-top: 3em;
+}
+
+
+.navbar{
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-brand {
+  margin-top: 70px;
+  padding-right: 20px;
+  margin-right: 269px;
+  margin-left: 300px;
+  /* overflow-y: auto; */
+}
+
+.v-img-container {
+  position: relative;
+  height: 100%;
+}
+.v-img {
+  border-radius: 20px;
+  height: 100%;
+  position: absolute;
+}
+.v-img:first-child {
+  margin-left: -100px;
+  margin-top: 100px;
+  z-index: 1;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+  10px 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+.v-img:last-child {
+  margin-left: 200px;
+  margin-top: 180px;
+  z-index: -1;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+  0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand>img{
+  width: 400px;
+  height: 180px;
+}
+
+/* API page */
+.apidiv {
+  overflow-x: auto;
+  word-break: break-all;
+}
+
+/* Exemplos de uso da api */
+.apibox {
+  border: 5px solid var(--box-border-color);
+  background-color: var(--highlight-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+.dropdown-menu li {
+  position: relative;
+}
+
+.dropdown-item:hover {
+  background-color: var(--navbar-background-color);
+}
+
+.dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+/* Submenu hover */
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+
+/* Mensagem de erro */
+#mensagem {
+  position: fixed;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+
+.sucesso {
+  color: var(--success-text-color);
+  background-color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.erro {
+  color: var(--error-text-color);
+  background-color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+.wrapper {
+  background: var(--wrapper-background-color);
+  margin: 20px auto;
+  padding: 40px;
+  width: 900px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 100px 0 var(--wrapper-box-shadow-color),
+    0 32px 64px -48px var(--wrapper-text-shadow-color);
+}
+
+.col-2 {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.nav-item {
+  font-style: bolder;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--nav-item-color);
+}

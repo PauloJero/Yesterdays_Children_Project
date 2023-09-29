@@ -1,0 +1,91 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .ident, .responsavel, .apoio-outras{
+    display: flex;
+    justify-content: space-between;
+}
+
+.servico-avaliacao{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.textarea {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 10px;
+    margin-bottom: 5px;
+}
+
+/* FORMULÁRIO DE RELATÓRIO E OUTRAS AVALIAÇÕES */
+
+/* Estilo para as seções de textarea */
+.textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .textarea section {
+    margin-bottom: 10px;
+  }
+  
+  .textarea h3 {
+    margin-bottom: 5px;
+  }
+  
+  .textarea textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+  }
+  
+  /* Estilo para a seção de critérios de avaliação */
+  .avaliacao {
+    margin-bottom: 20px;
+  }
+  
+  .avaliacao h3 {
+    margin-bottom: 10px;
+  }
+  
+  .avaliacao div {
+    margin-bottom: 5px;
+  }
+  
+  .avaliacao label {
+    display: block;
+  }
+  
+  .avaliacao select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilo para o botão Enviar */
+  #enviarAvaliacao {
+    text-align: center;
+  }
+  
+  #enviarAvaliacao input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #enviarAvaliacao input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  

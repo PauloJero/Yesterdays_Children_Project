@@ -1,0 +1,358 @@
+[
+{"openapi": "3.0.0"},
+
+{
+"servers":{
+    "description": "Api feita com base no modelo Swagger API",
+    "url": "http://localhost/Gaan/index.php/apis"
+    },
+"info":{
+    "description": "Este é uma api simples, onde se pode ver dados de idosos, familiares e funcionários de um lar de idosos",
+    "version": "1.0.0",
+    "title": "API simples de exibição de dados",
+    "contact":{
+            "email": "itm@yesterdaysChildren.com"
+            },
+    "license":{
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+},
+"paths":{
+    "/ver-idosos":{
+        "get":{
+            "summary": "retorna um json de todos os idosos",
+            "description": "Retorna os dados de idosos em formato json",
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/idosos/ver-idosos"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "400":{
+                    "description": "Houve um erro"
+                    }
+            }
+
+            }
+      
+    
+    },
+    "/ver-idosos/id":{
+        "get":{
+            "summary": "retorna um json de um determinado idoso",
+            "description": "Retorna os dados de um determinado idoso em formato json quando é passado um id com parâmetro",
+            "parameters": [
+                {
+                    "- in": "query",
+                    "id": "SearchingInt",
+                    "description": "Retorna os dados de um determinado idoso em formato json quando é passado um id com parâmetro",
+                    "schema":{
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                }
+            ],
+        
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/idosos/ver-idosos/id"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "400":{
+                    "description": "Houve um erro"
+                    }
+            }
+
+            }
+      
+    
+    },
+    "/ver-familiares":{
+        "get":{
+            "summary": "retorna um json de todos os familiares",
+            "description": "Retorna os dados de familiares em formato json",
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/familiares/ver-familiares"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "400":{
+                    "description": "Sem informação"
+                    }
+            }
+
+            }
+      
+    
+    },
+    "/ver-familiares/id":{
+        "get":{
+            "summary": "retorna um json de um determinado familiar",
+            "description": "Retorna os dados de um determinado familiar em formato json quando é passado um id com parâmetro",
+            "parameters": [
+                {
+                    "- in": "query",
+                    "id": "SearchingInt",
+                    "description": "Retorna os dados de um determinado familiar em formato json quando é passado um id com parâmetro",
+                    "schema":{
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                }
+            ],
+        
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/familiares/ver-familiares/id"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "204":{
+                    "description": "Sem resultado"
+                    }
+            }
+
+            }
+      
+    
+    },
+    "/ver-funcionarios":{
+        "get":{
+            "summary": "retorna um json de todos os funcionarios",
+            "description": "Retorna os dados de funcionarios em formato json",
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/funcionarios/ver-funcionarios"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "204":{
+                    "description": "Sem informação"
+                    }
+            }
+
+            }
+      
+    
+    },
+    "/ver-funcionarios/id":{
+        "get":{
+            "summary": "retorna um json de um determinado funcionario",
+            "description": "Retorna os dados de um determinado funcionario em formato json quando é passado um id com parâmetro",
+            "parameters": [
+                {
+                    "- in": "query",
+                    "id": "SearchingInt",
+                    "description": "Retorna os dados de um determinado funcionario em formato json quando é passado um id com parâmetro",
+                    "schema":{
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                }
+            ],
+        
+            "responses":{
+                "200":{
+                    "description": "Encontrou resultado com sucesso",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type": "array",
+                                "items":{
+                                    "$ref": "http://localhost/Gaan/index.php/api/funcionarios/ver-funcionarios/id"
+                                    }
+                                }
+                            }
+                        }       
+                },
+                "204":{
+                    "description": "Sem informação"
+                    }
+            }
+
+            }
+      
+    
+    }
+},
+
+"components":{
+    "schemas":{
+        "Idoso":{
+            "$ref": "http://localhost/Gaan/index.php/api/idosos/ver-idosos",
+            "type": "object",
+            "Idoso":{
+            "required": "none", 
+            "properties":{
+                "id_idoso":{
+                    "type": "int",
+                    "format": "integer",
+                    "example": "1"
+                    },
+                "nome":{
+                    "type": "string",
+                    "example": "Pedro"
+                    },
+                "apelido":{
+                    "type": "string",
+                    "format": "string",
+                    "example": "Silva"
+                    },
+                    "sexo":{
+                        "type": "int",
+                        "format": "integer",
+                        "example": "1"
+                        },
+                    "data_nascimento":{
+                        "type": "date",
+                        "example": "1958-04-10"
+                        },
+                    "id_familiar":{
+                        "type": "int",
+                        "format": "int",
+                        "example": "1"
+                        }  ,
+                        "parentesco":{
+                            "type": "string",
+                            "format": "string",
+                            "example": "Filho"
+                        }
+            }
+        }
+        
+        },
+        "Funcionario":{
+            "$ref": "http://localhost/Gaan/index.php/api/funcionarios/ver-funcionarios",
+            "type": "object",
+            "Funcionario":{
+                "required": "none", 
+                "properties":{
+                    "id_funcionario":{
+                        "type": "int",
+                        "example": "1"
+                        },
+                    "nome":{
+                        "type": "string",
+                        "example": "Pedro"
+                        },
+                    "apelido":{
+                        "type": "string",
+                        "example": "Silva"
+                        },
+                        "sexo":{
+                            "type": "int",
+                            "example": "1"
+                            },
+                        "email":{
+                            "type": "string",
+                            "example": "func@gmail.com"
+                            },
+                        "telefone":{
+                            "type": "string",
+                            "example": "963000000"
+                            }  ,
+                            "inicio_contrato":{
+                                "type": "date",
+                                "example": "2023-10-10"
+                            },
+                            "fim_contrato":{
+                                "type": "date",
+                                "example": "2023-06-01"
+                                },
+                            "id_funcao":{
+                                "type": "int",
+                                "example": "1"
+                                },
+                            "funcao":{
+                                "type": "string",
+                                "example": "Diretor"
+                                },
+                                "salario":{
+                                    "type": "decimal",
+                                    "example": "3000.00"
+                                    }
+                        }
+                    }
+        
+        },
+        "Familiar":{
+            "$ref": "http://localhost/Gaan/index.php/api/familiares/ver-familiares",
+            "type": "object",
+            "Familiar":{
+                "required": "none", 
+                "properties":{
+                    "id_familiar":{
+                        "type": "int",
+                        "example": "1"
+                        },
+                    "nome":{
+                        "type": "string",
+                        "example": "Pedro"
+                        },
+                    "apelido":{
+                        "type": "string",
+                        "example": "Silva"
+                        },
+                        "sexo":{
+                            "type": "int",
+                            "example": "1"
+                            },
+                        "email":{
+                            "type": "string",
+                            "example": "func@gmail.com"
+                            },
+                        "telefone":{
+                            "type": "string",
+                            "example": "963000000"
+                            }
+                    }
+        
+                }
+         } 
+    }
+}
+}
+]
